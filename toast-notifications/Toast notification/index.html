@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Toast Notification</title>
+    <style>
+        *{
+            top: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+        body{
+            background-color:#FDFDFD;
+            position: relative;
+        }
+        .btn-div{
+            width: 50%;
+            height: 70px;
+            margin: auto;
+            margin-top: 30%;
+            position: absolute;
+            left: 24%;
+        }
+        .btn-div button{
+            width: 130px;
+            height: 50px;
+            background-color: transparent;
+            border: transparent;
+            border-radius: 10px;
+            margin-left: 20px;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            color: white;
+        }
+        #erorr{
+            background-color: red;
+        }
+        #warning{
+           background-color:  #EBA432;
+        }
+        #sucess{
+            background-color: #479A2D;
+        }
+        #info{
+            background-color: blueviolet;
+        }
+        #box{
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            width: 20%;
+            transform: translateX(100%);
+        }
+        .trans{
+            transition: 3s linear;
+            transform: translateX(-100%);
+        }
+        @keyframes trans {
+            to{
+                transform: translateX(10%);
+            }
+            
+        }
+        .notification{
+            color: black;
+            font-size: 27px;
+            padding-left: 8px;
+            padding-right: 5px;
+            position: relative;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+        }
+        .success::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0px;
+            height: 4px;
+            background-color:#479A2D ;
+            animation: a1 linear 5s;
+        }
+        @keyframes a1 {
+            to{
+                width: 100%;
+            }
+        }
+        .success{
+            color: #479A2D;
+            border-left: 4px solid #479A2D;
+            border-radius: 10px;
+            background-color: #469a2d81;
+        }
+        .error{
+            color: red;
+            border-left: 4px solid red;
+            border-radius: 10px;
+            background-color: rgba(255, 0, 0, 0.438);
+        }
+        .warning{
+            color: #EBA432;
+            border-left: #EBA432;
+            border-radius: 10px;
+            background-color: #eba43268;
+            border-left: 4px solid #EBA432;
+        }
+        .warning::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0px;
+            height: 4px;
+            background-color:#EBA432;
+            animation: a1 linear 5s;
+        }
+        .error::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0px;
+            height: 4px;
+            background-color: red;
+            animation: a1 linear 5s;
+        }
+        @keyframes a1 {
+            to{
+                width: 100%;
+            }
+        }
+        .info{
+            color: blue;
+            border-left: blue;
+            border-radius: 10px;
+            border-left: 4px solid blue;
+            background-color: rgba(0, 0, 255, 0.447);
+        }
+        .info::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0px;
+            height: 4px;
+            background-color: rgb(0, 0, 255);
+            animation: a1 linear 5s;
+        }
+        
+        #box p{
+            font-size: 22px;
+            margin-left: -8px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+       
+    </div>
+    <div class="btn-div">
+        <button id="erorr">Error</button>
+        <button id="warning">Warning</button>
+        <button id="sucess">Success</button>
+        <button id="info">Informational</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

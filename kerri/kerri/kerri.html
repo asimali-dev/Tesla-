@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>kerri</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .main-section{
+            width: 100%;
+            height: 100vh;
+            background-image: url(./header-bg.jpg);
+            background-size: cover;
+            background-position: center;
+            padding-top: 1px;
+        }
+        .black{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(4, 4, 4, 0.441);
+            position: relative;
+            padding: 1px;
+        }
+        .nav{
+            height: 80px;
+            /* border: 1px solid red; */
+            padding-top: 1px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .logo{
+            width: 120px;
+            height: 50px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 90px;
+            margin-top: 20px;
+        }
+        .list{
+            width: 600px;
+            height: 70px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 30%;
+
+        }
+        .logo-fit{
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: contain;
+            filter: invert(1);
+        }
+        .list-style{
+            color: white;
+            font-size: 17px;
+            font-weight: 500;
+            list-style: none;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 23px;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        .list-style:hover{
+            color:  #C2C2C2;
+        }
+        .welcome-div{
+            height: 520px;
+            /* border: 2px solid black; */
+            margin-top: 70px;
+            /* margin-top: 70px; */
+            padding-top: 1px;
+        }
+        .welcome{
+            height: 50px;
+            /* border: 1px solid black; */
+            margin: auto;
+            width: 120px;
+            color: white;
+            font-size: 28px;
+            font-weight: 500;
+            margin-top: 50px;
+
+        }
+        .text-animation{
+            width: 60%;
+            height: 70px;
+            /* border: 2px solid black; */
+            margin: auto;
+            margin-top: 30px;
+            position: relative;
+            animation: parent linear 9s infinite;
+            border-right: 4px solid white; 
+            white-space: nowrap;
+            overflow: hidden;
+            
+        }
+        @keyframes parent {
+            0%{
+                width: 0%;
+            }
+            11%{
+                width: 33%;
+            }
+
+            12%{
+                width: 33%;
+            }
+            22%{
+                width: 33%;
+            }
+
+            24%{
+                width: 33%;
+            }
+            33%{
+                width: 0%;
+            }
+
+            34%{
+                width: 0%;
+            }
+            44%{
+                width: 52%;
+            }
+            46%{
+                width: 52%;
+            }
+            55%{
+                width: 52%;
+            }
+            58%{
+                width: 52%;
+            }
+            66%{
+                width: 0%;
+            }
+            68%{
+                width: 0%;
+            }
+            77%{
+                width: 45%;
+            }
+            82%{
+                width: 45%;
+            }
+            88%{
+                width: 45%;
+            }
+            84%{
+                width: 45%;
+            }
+            100%{
+                width: 0%;
+            }
+        }
+        .text-animation::before{
+            content: '';
+            position: absolute;
+            /* top: 5px; */
+            left: 40px;
+            width: 90%;
+            height: 80px;
+            /* border: 2px solid red; */
+            color: white;
+            font-size: 54px;
+            font-weight: 700;
+            text-align: center;
+            animation: animation linear 9s infinite; 
+        }
+        @keyframes animation {
+            0%{
+                content:"I'M Kerri Deo. " ;
+            }
+            33%{
+                content: "I'M Kerri Deo. ";
+            }
+
+            34%{
+                content: "I'M A Graphic Designer.";            }
+            67%{
+                content: "I'M A Graphic Designer." ;
+            }
+
+            68%{
+                content: "I'M A Photographer.";
+            }
+            100%{
+                content: "I'M A Photographer.";
+
+            }
+            
+        }
+        .name{
+            width: 50%;
+            height: 90px;
+            /* border: 1px solid black; */
+            margin-left: 25%;
+            position: absolute;
+            opacity: 0;
+        }
+        /* .name-style{
+            display: inline-block;
+            vertical-align: top;
+        } */
+        .slash{
+            width: 10px;
+            height: 90px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            color: white;
+            font-size: 56px;
+            font-weight: 700;
+            margin-left: -10px;
+        }
+        .graphic{
+            width: 90%;
+            height: 90px;
+            /* border: 1px solid black; */
+            position: absolute;
+            margin-left: 10%;
+            opacity: 0;
+        }
+        .Photographer{
+            width: 75%;
+            height: 90px;
+            border: 1px solid black;
+            margin-left: 10%;
+            opacity: 0;
+        }
+        .vide1{
+            opacity: 1;
+            animation: t1 linear 10s infinite;
+            overflow: hidden;
+        }
+        
+        .established{
+            width: 50%;
+            height: 50px;
+            margin: auto;
+            margin-top: 30px;
+            /* border: 1px solid black; */
+        }
+        .established-design{
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            color: #C2C2C2;
+        }
+        .cv{
+            width: 200px;
+            height: 60px;
+            border-radius: 50px;
+            margin-left: 43%;
+            margin-top: 40px;
+            background-color: transparent;
+            border: 2px solid #C2C2C2;
+            color: #C2C2C2;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .cv:hover{
+            border: transparent;
+            background-color: white;
+            color: black;
+
+        }
+        .icon{
+            width: 40px;
+            height: 50px;
+            margin: auto;
+            /* border: 1px solid black; */
+            margin-top: 60px;
+            animation: a1 linear 1s infinite;
+        }
+        .fa-angle-down{
+            font-size: 36px;
+            color: white;
+            font-weight: 600;
+        }
+        @keyframes a1 {
+            from{
+                margin-top: 60px;
+            }
+            to{
+                margin-top: 50px;
+            }
+            
+        }
+        .about-kerri{
+            height: 500px;
+            /* background-color: gray; */
+            padding-top: 1px;
+            margin-top: 80px;
+        }
+        .kerri-img{
+            height: 370px;
+            width: 40%;
+            /* border: 1px solid black; */
+            margin-top: 40px;
+            margin-left: 40px;
+            display: inline-block;
+            vertical-align: top;
+
+        }
+        .kerri-info{
+            height: 370px;
+            width: 47%;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 40px;
+            margin-left: 40px;
+
+
+        }
+        .img-fitter{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        .kerri-head{
+            width: 200px;
+            height: 50px;
+            /* border: 1px solid black; */
+            
+        }
+        .styling{
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .kerri-name{
+            width: 300px;
+            height: 40px;
+            /* border: 1px solid black; */
+            margin-top: 10px;
+
+        }
+        .kerri-style{
+            font-size: 25px;
+            font-weight: 500;
+
+        }
+        .color{
+            color: #E85F78;
+        }
+        .kerri-text{
+            width: 95%;
+            height: 190px;
+            /* border: 1px solid black; */
+
+        }
+        .kerri-text-style{
+            font-size: 15px;
+            font-weight: 500;
+            color: #595C5F;
+            margin-top: 10px;
+        }
+        .kerri-icon{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 1px solid black;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+        }
+        .margin1{
+            margin-left: 0;
+        }
+        .fa-dribbble{
+            font-size: 25px;
+            margin-left: 7px;
+            margin-top: 7px;
+        }
+        .fa-facebook-f{
+            font-size: 22px;
+            margin-left: 12px;
+            margin-top: 7px;
+
+        }
+        .fa-linkedin-in{
+            font-size: 22px;
+            margin-left: 12px;
+            margin-top: 7px;
+
+        }
+        .fa-twitter{
+            font-size: 22px;
+            margin-left: 10px;
+            margin-top: 7px;
+
+
+        }
+        .kerri-icon:hover{
+            border: 2px solid #E65F78;
+            color: #E65F78;
+        }
+        .services{
+            height: 860px;
+            background-color: #F8F9FA;
+            padding-top: 1px ;
+        }
+        .s-head{
+            width: 200px;
+            height: 50px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 35px;
+        }
+        .s-style{
+            font-size: 34px;
+            font-weight:600;
+        }
+        .s-text{
+            width: 40%;
+            height: 60px;
+            /* border: 1px solid black; */
+            margin: auto;
+
+        }
+        .s-text-style{
+            font-size: 17px;
+            font-weight: 500;
+            text-align: center;
+            color: #575B5E;
+        }
+        .six-div{
+            width: 90%;
+            height: 600px;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .services-parent{
+            width: 340px;
+            height: 260px;
+            border-radius: 5px;
+            border: 1px solid #575B5E;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        .margin2{
+            margin-left: 0px;
+        }
+        .bar-chart{
+            width: 90px;
+            height: 55px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 20px;
+        }
+        .bar-head{
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .border{
+            border-bottom: 2px solid #575B5E;
+            width: 70px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .services-parent:hover .border{
+            width: 100px;
+        }
+        .bar-text{
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 18px;
+            color: #575B5E;
+        }
+        .hire-div{
+            height: 350px;
+            /* background-color: gray; */
+            padding-top: 1px;
+        }
+        .h-head{
+            width: 40%;
+            height: 70px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 100px;
+
+        }
+        .h-style{
+            font-size: 37px;
+            font-weight: 600;
+        }
+        .hire-me{
+            width: 130px;
+            height: 55px;
+            border-radius: 5px;
+            background-color:#E65F78;
+            border: transparent;
+            color: white;
+            font-size: 17px;
+            font-weight: 500;
+            margin-left: 45%;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .client{
+            height: 600px;
+            background-color: #F8F9FA;
+            padding-top: 1px;
+        }
+        .c-head{
+            width: 170px;
+            height: 45px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 100px;
+        }
+        .c-style{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        .c-text{
+            width: 420px;
+            height: 60px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 20px;
+
+        }
+        .c-text-style{
+            font-weight: 17px;
+            font-weight: 400;
+            text-align: center;
+            color: #AA6E5E;
+        }
+        .pic-parent{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 1px solid gray;
+            margin: auto;
+            margin-top: 30px; 
+        }
+        .pic-adjust{
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            margin-left: 5px;
+            margin-top: 5px;
+
+        }
+        .pic-parent1{
+            width: 50%;
+            height: 40px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 30px;
+        }
+        .pic-text{
+            font-family: 'Times New Roman', Times, serif;
+            color: #818386;
+            font-size: 17px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .ebony{
+            font-size: 17px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .Envato{
+            font-weight: 500;
+        }
+        .work{
+            height: 800px;
+            /* background-color: #C2C2C2; */
+            padding-top: 1px;
+        }
+        .work-head{
+            width: 14%;
+            height: 40px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        .w-text{
+            width: 35%;
+            height: 60px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 20px;
+
+        }
+        .listing{
+            width: 55%;
+            height: 35px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 40px;
+
+        }
+        .work-style{
+            font-size: 17px;
+            font-weight: 400;
+            list-style: none;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 45px;
+            text-align: center;
+            /* border: 1px solid #000; */
+            border-radius: 20px;
+            padding: 5px 10px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .s-1{
+            background-color: tomato;
+            color: white;
+           
+        }
+        .work-style:hover{
+            background-color: tomato;
+            color: white;
+           
+
+        }
+        .list-parent{
+            width: 80%;
+            height: 500px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 30px;
+
+        }
+        .project-title{
+            width: 30%;
+            height: 230px;
+            /* border: 1px solid black; */
+            margin-left: 35px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 20px;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+
+
+        }
+        .p-margin{
+            margin-left: 0;
+        }
+        .title-sheet{
+            width: 100%;
+            height: 100%;
+            background-color:#303030df;
+            position: absolute;
+            opacity: 0;
+            border-radius: 10px;
+        }
+        .category{
+            font-size: 16px;
+            color: #A4ACAC;
+            font-weight: 500;
+            text-align: center;
+            /* margin-top: 80px; */
+        }
+        .project-t{
+            font-weight: 600;
+            font-size: 22px;
+            text-align: center;
+            color: white;
+            margin-top: 10px;
+        }
+        .trans{
+            width: 200px;
+            height: 80px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 90px;
+            transition: 1s;
+            opacity: 0;
+        }
+        .img-fitter1{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            position: absolute;
+        }
+        .project-title:hover .title-sheet{
+            opacity: 1;
+        }
+        .project-title:hover .trans{
+            opacity: 1;
+            margin-top: 70px;
+
+        }
+        .blog{
+            height: 700px;
+            /* border: 1px solid black; */
+            background-color: #F8F9FA;
+            padding-top: 1px;
+
+        }
+        .blog-head{
+            width: 12%;
+            height: 40px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        .blog-text{
+            width: 35%;
+            height: 60px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 15px;
+
+        }
+        .three-blog{
+            width: 85%;
+            height: 400px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 40px;
+        }
+        .b-parent{
+            width: 31%;
+            height: 400px;
+            background-color: white;
+            border-radius: 5px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 30px;
+        }
+        .b-margin{
+            margin-left: 0;
+        }
+        .b-img{
+            height: 190px;
+            /* border: 1px solid black; */
+        }
+        .b-img-fit{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 5px;
+
+        }
+        .b-head{
+            font-size: 25px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+        .b-text{
+            font-size: 17px;
+            color: #E85F78;
+        }
+        .coloring{
+            font-weight: 700;
+        }
+        .b-texting{
+            font-size: 17px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        .b-buton{
+            background-color: transparent;
+            border: transparent;
+            color: #E85F78;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 15px;
+            cursor: pointer;
+
+        }
+        .contact{
+            height: 830px;
+            /* border: 1px solid black; */
+            padding-top: 1px;
+        }
+        .contact-head{
+            width: 15%;
+            height: 40px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 40px;
+
+        }
+        .contact-text{
+            width: 35%;
+            height: 60px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 10px;
+
+        }
+        .contact-icon{
+            width: 90%;
+            height: 140px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 30px;
+
+        }
+        .c-icon{
+            width: 27%;
+            height: 130px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 100px;
+
+        }
+        .c-margin{
+            margin-left: 0;
+        }
+        .call-icon{
+            height: 70px;
+            /* border: 1px solid black; */
+        }
+        .call{
+            height: 55px;
+            /* border: 1px solid black; */
+
+        }
+        .call-style{
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .call-style1{
+            font-size: 17px;
+            font-weight: 400;
+            text-align: center;
+
+        }
+        .input{
+            height: 50px;
+            width: 90%;
+            margin: auto;
+            /* border: 1px solid black; */
+            margin-top: 40px;
+
+        }
+        .i-1{
+            width: 47%;
+            height: 45px;
+            border: 2px solid #DEE2E6;
+            border-radius: 5px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 35px;
+            padding-left: 10px;
+            font-size: 17px;
+            font-weight: 400;
+        }
+        .i-margin{
+            margin-left: 0;
+
+        }
+        .sub{
+            width: 89%;
+            height: 45px;
+            margin-left:60px;
+            border: 2px solid #DEE2E6;
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 17px;
+            font-weight: 400;
+            margin-top: 25px;
+            padding-left: 10px;
+
+        }
+        .mes{
+            width: 89%;
+            height: 90px;
+            margin-left:60px;
+            border: 2px solid #DEE2E6;
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 17px;
+            font-weight: 400;
+            margin-top: 25px;
+            padding-left: 10px;
+
+        }
+        .send{
+            width: 180px;
+            height: 60px;
+            border-radius: 5px;
+            background-color: #E8516C;
+            border: transparent;
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+            margin-left: 81%;
+            margin-top: 30px;
+            cursor: pointer;
+
+        }
+        .last{
+            height: 240px;
+            background-color: black;
+            padding-top: 1px;
+        }
+        .last-icon{
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: top;
+            background-color: #313131dd;
+            margin-left: 20px;
+        }
+        .last-parent{
+            width: 20%;
+            height: 60px;
+            /* border: 1px solid white; */
+            margin: auto;
+            margin-top: 70px;
+        }
+        .facebook{
+            color: #DEE2E6;
+            margin-left: 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        .facebook:hover{
+            color: #E8516C;
+        }
+        .last-text{
+            font-size: 17px;
+            font-weight: 500;
+            color: #DEE2E6;
+            text-align: center;
+            margin-top: 30px;
+            
+        }
+        .fa-mobile-screen{
+            font-size: 40px;
+            margin-left: 43%;
+            margin-top: 15px;
+        }
+        .fa-envelope{
+            font-size: 40px;
+            margin-left: 43%;
+            margin-top: 15px;
+
+        }
+        .fa-location-dot{
+            font-size: 40px;
+            margin-left: 43%;
+            margin-top: 15px;
+
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div class="main-section">
+        <div class="black">
+
+            <div class="nav">
+                <div class="logo">
+                   <img class="logo-fit" src="./logo-dark.png" alt="">
+                </div>
+                <div class="list">
+                    <ul>
+                    <li class="list-style">Home</li>
+                    <li class="list-style">About</li>
+                    <li class="list-style">Services</li>
+                    <li class="list-style">Cleint</li>
+                    <li class="list-style">Portfolio</li>
+                    <li class="list-style">Blog</li>
+                    <li class="list-style">Contact</li>
+                    </ul>
+                </div>
+            </div>
+        <div class="welcome-div">
+            <div class="welcome">Welcome</div>
+            <div class="text-animation">
+                <!-- <div class="name  vide1">
+                    <h1 class="name-style">I'M Kerri Deo.</h1>
+                    <div class="slash">|</div>
+                </div>
+                <div class="graphic">
+                   <h1 class="name-style vide2">I'M A Graphic Designer.</h1>
+                </div>
+                <div class="Photographer">
+                    <h1 class="name-style vide3">I'M A Photographer.|</h1>
+                </div> -->
+            </div>
+            <div class="established">
+                <p class="established-design">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+            </div>
+            <button class="cv">DOWNLOAD CV</button>
+            <div class="icon">
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="about-kerri">
+        <div class="kerri-img">
+            <img class="img-fitter" src="./about.jpg" alt="">
+        </div>
+        <div class="kerri-info">
+            <div class="kerri-head">
+                <h2 class="styling">About Me</h2>
+            </div>
+            <div class="kerri-name">
+                <h2 class="kerri-style">Hello! <span class="color"> I'M Kerri Deo.</span></h2>
+            </div>
+            <div class="kerri-text">
+                <p class="kerri-text-style">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <p class="kerri-text-style">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                <p class="kerri-text-style">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            </div>
+            <div class="kerri-icon margin1">
+                <i class="fa-brands fa-dribbble"></i>
+            </div>
+            <div class="kerri-icon">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="kerri-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <div class="kerri-icon">
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+    <div class="services">
+        <div class="s-head">
+            <h1 class="s-style">Our Services</h1>
+        </div>
+        <div class="s-text">
+            <p class="s-text-style">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+        </div>
+        <div class="six-div">
+            <div class="services-parent margin2">
+                <div class="bar-chart">
+                    <img class="img-fitter" src="./bar-chart.png" alt="">
+                </div>
+                <h2 class="bar-head">Graphic Design</h2>
+                <div class="border"></div>
+                <p class="bar-text">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+            </div>
+            <div class="services-parent">
+                <div class="bar-chart">
+                    <img class="img-fitter" src="./coffee.png" alt="">
+                </div>
+                <h2 class="bar-head">Unlimited Color</h2>
+                <div class="border"></div>
+                <p class="bar-text">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+            </div>
+            <div class="services-parent">
+                <div class="bar-chart">
+                    <img class="img-fitter" src="./digital-campaign.png" alt="">
+                </div>
+                <h2 class="bar-head">Media Marketing</h2>
+                <div class="border"></div>
+                <p class="bar-text">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+
+            </div>
+            <div class="services-parent margin2">
+                <div class="bar-chart">
+                    <img class="img-fitter" src="./wifi.png" alt="">
+                </div>
+                <h2 class="bar-head">Unlimited Wifi</h2>
+                <div class="border"></div>
+                <p class="bar-text">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+
+            </div>
+            <div class="services-parent">
+                <div class="bar-chart">
+                    <img class="img-fitter" src="./responsive.png" alt="">
+                </div>
+                <h2 class="bar-head">Responsive Design</h2>
+                <div class="border"></div>
+                <p class="bar-text">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+
+            </div>
+            <div class="services-parent">
+                <div class="bar-chart">
+                    <img class="img-fitter" src="./edit.png" alt="">
+                </div>
+                <h2 class="bar-head">Easy to customize</h2>
+                <div class="border"></div>
+                <p class="bar-text">There are many variations of passages of but the majority have suffered alteration in some form.</p>
+            </div>
+        </div>
+    </div>
+    <div class="hire-div">
+        <div class="h-head">
+            <h1 class="h-style">I Am Available For Freelancer.</h1>
+        </div>
+        <button class="hire-me">Hire Me!</button>
+    </div>
+    <div class="client">
+        <div class="c-head">
+            <h1 class="c-style">Our Client</h1>
+        </div>
+        <div class="c-text">
+            <p class="c-text-style">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+        </div>
+        <div class="pic-parent">
+            <img class="pic-adjust" src="testi-1.jpg" alt="">
+        </div>
+        <div class="pic-parent1">
+            <p class="pic-text">"The point of using Loram Ipsum that it has more-or-less noraml distribution of letters as opposed to using 'Contant here"</p>
+        </div>
+        <p class="ebony">-Ebony verty,<span class="Envato">Envato</span></p>
+    </div>
+    <div class="work">
+        <div class="work-head">
+            <h1 class="s-style">Our Works</h1>
+        </div>
+        <div class="w-text">
+            <p class="s-text-style">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+        </div>
+            <ul class="listing">
+                <li class="work-style s-1">ALL</li>
+                <li class="work-style">SEO</li>
+                <li class="work-style">WEBDESIGN</li>
+                <li class="work-style">WORK</li>
+                <li class="work-style">WORDPRESS</li>
+            </ul>
+        <div class="list-parent">
+            <div class="project-title p-margin">
+                <img class="img-fitter1" src="./1.jpg" alt="">
+                <div class="title-sheet">
+                    <div class="trans">
+                    <p class="category">Category</p>
+                    <h2 class="project-t">Project Title</h2> 
+                     </div>
+
+                </div>
+            </div>
+            <div class="project-title">
+                <img class="img-fitter1" src="./2.jpg" alt="">
+                <div class="title-sheet">
+                    <div class="trans">
+                    <p class="category">Category</p>
+                    <h2 class="project-t">Project Title</h2> 
+                     </div>
+                </div>
+            </div>
+            <div class="project-title">
+                <img class="img-fitter1" src="./3.jpg" alt="">
+                <div class="title-sheet">
+                    <div class="trans">
+                    <p class="category">Category</p>
+                    <h2 class="project-t">Project Title</h2> 
+                     </div>
+                </div>
+
+            </div>
+            <div class="project-title p-margin">
+                <img class="img-fitter1" src="./4.jpg" alt="">
+                <div class="title-sheet">
+                    <div class="trans">
+                    <p class="category">Category</p>
+                    <h2 class="project-t">Project Title</h2> 
+                     </div>
+                </div>
+            </div>
+            <div class="project-title">
+                <img class="img-fitter1" src="./5.jpg" alt="">
+                <div class="title-sheet">
+                    <div class="trans">
+                    <p class="category">Category</p>
+                    <h2 class="project-t">Project Title</h2> 
+                     </div>
+                </div>
+            </div>
+            <div class="project-title">
+                <img class="img-fitter1" src="./6.jpg" alt="">
+                <div class="title-sheet">
+                    <div class="trans">
+                    <p class="category">Category</p>
+                    <h2 class="project-t">Project Title</h2> 
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blog">
+        <div class="blog-head">
+            <h1 class="s-style">Our Blog</h1>
+        </div>
+        <div class="blog-text">
+            <p class="s-text-style">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+        </div>
+        <div class="three-blog">
+            <div class="b-parent b-margin">
+                <div class="b-img">
+                    <img class="b-img-fit" src="./blog-1.jpg" alt="">
+                </div>
+                <h1 class="b-head">There are many variations</h1>
+                <p class="b-head b-text">11 March 2018 <span class="coloring"> By Kerri</span></p>
+                <p class="b-texting">Sit sagittis vulputate laoreet sodales tortor nulla lobortis bibendum netus primis fames. Lobortis ultricies.</p>
+                <button class="b-buton">Read More...</button>
+            </div>
+            <div class="b-parent">
+                <div class="b-img">
+                    <img class="b-img-fit" src="./blog-2.jpg" alt="">
+                </div>
+                <h1 class="b-head">Contrary to popular belief</h1>
+                <p class="b-head b-text">18 March 2018<span class="coloring"> By Kerri</span></p>
+                <p class="b-texting">Sit sagittis vulputate laoreet sodales tortor nulla lobortis bibendum netus primis fames. Lobortis ultricies.</p>
+                <button class="b-buton">Read More...</button>
+
+            </div>
+            <div class="b-parent">
+                <div class="b-img">
+                    <img class="b-img-fit" src="./blog-3.jpg" alt="">
+                </div>
+                <h1 class="b-head">Lorem Ipsum is not simply</h1>
+                <p class="b-head b-text">22 March 2018<span class="coloring"> By Kerri</span></p>
+                <p class="b-texting">Sit sagittis vulputate laoreet sodales tortor nulla lobortis bibendum netus primis fames. Lobortis ultricies.</p>
+                <button class="b-buton">Read More...</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="contact-head">
+            <h2 class="s-style">Contact Us</h2>
+        </div>
+        <div class="contact-text">
+            <p class="s-text-style">It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
+        </div>
+        <div class="contact-icon">
+            <div class="c-icon c-margin">
+                <div class="call-icon">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <div class="call">
+                    <h2 class="call-style">Call Us On</h2>
+                    <p class="call-style1">+985 123 7856</p>
+                </div>
+            </div>
+            <div class="c-icon">
+                <div class="call-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="call">
+                    <h2 class="call-style">Email Us At</h2>
+                    <p class="call-style1">Website.Kerri@gmail.com</p>
+                </div>
+
+            </div>
+            <div class="c-icon">
+                <div class="call-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="call">
+                    <h2 class="call-style">Visit Office</h2>
+                    <p class="call-style1">202, Grasselli Street , Conway.</p>
+                </div>
+            </div>
+        </div>
+        <div class="input">
+            <input type="text" class="i-1 i-margin" placeholder="Your Name...">
+            <input type="text" class="i-1" placeholder="Your Email...">
+        </div>
+        <input type="text" class="sub" placeholder="Your Subject...">
+        <input type="text" class="mes" placeholder="Your Message...">
+        <button class="send">Send Message</button>
+    </div>
+    <div class="last">
+        <div class="last-parent">
+            <ul>
+                <li class="last-icon">
+                    <i class="fa-brands fa-facebook-f facebook"></i>
+
+                </li>
+                <li class="last-icon">
+                    <i class="fa-brands fa-linkedin-in facebook"></i>
+                </li>
+                <li class="last-icon">
+                    <i class="fa-brands fa-twitter facebook"></i>
+                </li>
+            </ul>
+        </div>
+        <p class="last-text">2024 © Kerri. Design by SRBThemes.</p>
+    </div>
+   
+    
+</body>
+</html>

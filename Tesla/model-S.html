@@ -1,0 +1,3038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Tesla Model S</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: 0;
+            padding: 0;
+        }
+
+        .image-div {
+            height: 700px;
+            background-image: url(./Model-S-Main-Hero-Desktop-v3.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        nav {
+            height: 70px;
+            /* background-color: gray; */
+            padding-top: 1px;
+            cursor: pointer;
+
+
+        }
+
+        nav:hover {
+            background-color: white;
+        }
+
+        .logo {
+            width: 180px;
+            height: 70px;
+            /* border: 1px solid black; */
+            margin-left: 50px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .logo-setter {
+            width: 180px;
+            height: 70px;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        #nav-ul {
+            width: 450px;
+            height: 60px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 190px;
+        }
+
+        .list-style {
+            list-style: none;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            margin-top: 20px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .icons {
+            width: 130px;
+            height: 50px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 240px;
+        }
+
+        .fa-question {
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+
+        }
+
+        .fa-globe {
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .fa-user {
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .vehicle {
+            height: 0;
+            width: 1270px;
+            background-color: white;
+            position: absolute;
+            margin-left: -450px;
+            margin-top: 5px;
+            overflow: hidden;
+            transition: 0.5s;
+            height: 0;
+        }
+
+        .list-style:hover .vehicle {
+            height: 500px;
+        }
+
+        .v1 {
+            width: 60%;
+            height: 450px;
+            /* border: 1px solid black; */
+            margin-left: 80px;
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        .model {
+            width: 220px;
+            height: 180px;
+            /* border: 1px solid black; */
+            margin-top: 50px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .margin {
+            margin-left: 40px;
+        }
+
+        .model-img {
+            height: 120px;
+            /* border: 1px solid black; */
+        }
+
+        .img-set {
+            height: 120px;
+            object-fit: cover;
+            object-position: cover;
+        }
+
+        .model-txt {
+            height: 54px;
+            /* border: 1px solid black; */
+        }
+
+        .model-design {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .order {
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: gray;
+            text-align: center;
+        }
+
+        .line {
+            width: 20px;
+            height: 450px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: -15px;
+        }
+
+        .border {
+            border-right: 2px solid gray;
+            height: 400px;
+            margin-top: 50px;
+        }
+
+        .listing {
+            width: 130px;
+            height: 400px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 40px;
+            position: absolute;
+            border: 1px solid black;
+        }
+
+        .listed {
+            font-size: 17px;
+            color: gray;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 15px;
+            list-style: none;
+            cursor: pointer;
+            /* margin-left: 0 !important; */
+        }
+
+        .list1 {
+            margin-top: 60px;
+        }
+
+        .energy {
+            width: 1270px;
+            background-color: white;
+            height: 500px;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: -530px;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+
+        }
+
+        .list-style:hover .energy {
+            height: 500px;
+        }
+
+        .solar {
+            height: 180px;
+            width: 200px;
+            /* border: 1px solid black; */
+            margin-top: 50px;
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .energy-parent1 {
+            width: 60%;
+            height: 460px;
+            /* border: 1px solid black;  */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .energy-parent2 {
+            width: 35%;
+            height: 450px;
+            /* border: 1px solid black;  */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .s-margin {
+            margin-left: 70px;
+        }
+
+        .solar-img {
+            height: 115px;
+            /* border: 1px solid black; */
+        }
+
+        .solar-fitter {
+            height: 115px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .solar-txt {
+            font-size: 18px;
+            font-weight: 500;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .solar-list {
+            width: 200px;
+            height: 450px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+
+        }
+
+        .solar-list1 {
+            margin-top: 90px;
+        }
+
+        .charging {
+            width: 1280px;
+            background-color: white;
+            height: 400px;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: -615px;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .list-style:hover .charging {
+            height: 400px;
+
+        }
+
+        .charge1 {
+            width: 55%;
+            /* border: 1px solid black; */
+            height: 400px;
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        .charge2 {
+            width: 40%;
+            /* border: 1px solid black; */
+            height: 400px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .charge-parent {
+            width: 200px;
+            height: 230px;
+            /* border: 1px solid black; */
+            margin-top: 100px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .parent1 {
+            margin-left: 60px;
+        }
+
+        .charge-img {
+            height: 150px;
+            /* border: 1px solid black; */
+        }
+
+        .charge-fitter {
+            height: 150px;
+            width: 90%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .o1 {
+            margin-top: 10px;
+        }
+
+        .b7 {
+            height: 300px;
+        }
+
+        .charge-list {
+            width: 250px;
+            height: 300px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 50px;
+            margin-left: 30px;
+        }
+
+        .discover {
+            width: 1550px;
+            background-color: white;
+            height: 400px;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: -700px;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .discover-parent1 {
+            width: 250px;
+            height: 300px;
+            /* border: 1px solid black; */
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 80px;
+        }
+
+        .list-style:hover .discover {
+            height: 400px;
+        }
+
+        .d1 {
+            margin-left: 250px;
+        }
+
+        .discover-style {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 10px;
+            list-style: none;
+        }
+
+        .discover-list1 {
+            color: gray;
+            font-size: 17px;
+            padding-bottom: 15px;
+        }
+
+        .shop {
+            width: 1550px;
+            background-color: white;
+            height: 400px;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: -800px;
+            height: 0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .list-style:hover .shop {
+            height: 400px;
+        }
+
+        .images {
+            width: 170px;
+            height: 190px;
+            /* border: 1px solid black; */
+            margin-left: 30px;
+            margin-top: 100px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .i1 {
+            margin-left: 250px;
+        }
+
+        .img-setter {
+            width: 97%;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .shop-style {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 500px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .img1 {
+            width: 100%;
+        }
+
+        .model3 {
+            width: 150px;
+            height: 60px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .model3-design {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        .tax {
+            width: 13%;
+            height: 35px;
+            /* border: 1px solid black; */
+            margin: auto;
+        }
+
+        .tax-style {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .tax-margin {
+            margin-left: 15px;
+        }
+
+        .header2 {
+            width: 17%;
+            height: 40px;
+            /* border: 1px solid black; */
+            margin: auto;
+        }
+
+        .head-line {
+            border-bottom: 2px solid black;
+            width: 91%;
+            margin-top: 2px;
+            transition: 0.1s;
+            margin: auto;
+        }
+
+        .header2:hover .head-line {
+            margin-top: 0;
+            border-bottom: 3px solid black;
+        }
+
+        .button {
+            width: 42%;
+            height: 50px;
+            margin: auto;
+            margin-top: 20px;
+            /* border: 1px solid black; */
+        }
+
+        .b1 {
+            width: 240px;
+            height: 50px;
+            font-size: 14px;
+            border-radius: 10px;
+            font-weight: 500;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            cursor: pointer;
+            border: transparent;
+            background-color: #3E6AE1;
+        }
+
+        .b2 {
+            width: 240px;
+            height: 54px;
+            border-radius: 10px;
+            margin-left: 25px;
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            border: 2px solid white;
+            background-color: transparent;
+
+        }
+
+        .b2:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .model-y-div {
+            height: 600px;
+            /* background-color: gray; */
+            background-image: url(./Homepage-Model-Y-Desktop-Global.jpeg);
+            background-position: center;
+            background-size: cover;
+            padding-top: 1px;
+        }
+
+        .model-y {
+            width: 160px;
+            height: 60px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 15px;
+        }
+
+        .tax1 {
+            width: 10%;
+            height: 90px;
+            /* border: 1px solid black; */
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .s1 {
+            margin-left: 12px;
+        }
+
+        .mph-parent {
+            width: 53%;
+            height: 100px;
+            /* border: 2px solid black; */
+            margin: auto;
+            margin-top: 280px;
+        }
+
+        .mph {
+            width: 160px;
+            height: 100px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 1px;
+        }
+
+        .mph-head-style {
+
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+            text-align: center;
+            padding-top: 1px;
+            margin-top: 15px;
+        }
+
+        .mph-txt {
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 19px;
+            text-align: center;
+        }
+
+        .black {
+            height: 250px;
+            background-color: black;
+            padding-top: 1px;
+        }
+
+        .black-head {
+            width: 25%;
+            height: 40px;
+            /* border: 1px solid white; */
+            margin: auto;
+            margin-top: 30px;
+            color: white;
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .black-body {
+            width: 24%;
+            height: 60px;
+            /* border: 1px solid white; */
+            margin: auto;
+            margin-top: 60px;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+
+        .img-div {
+            height: 600px;
+            background-color: black;
+        }
+
+        .img-setter {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .vedio {
+            height: 900px;
+            background-color: black;
+            padding-top: 1px;
+            /* border: 1px solid white; */
+        }
+
+        .vedio-parent {
+            width: 90%;
+            height: 500px;
+            background-color: black;
+            margin: auto;
+            margin-top: 50px;
+            position: relative;
+            /* border: 1px solid white; */
+        }
+
+        .vedio-set {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .vide1 {
+            opacity: 1;
+            animation: a1 10s infinite linear;
+        }
+
+        @keyframes a1 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+
+            }
+
+            21% {
+                opacity: 0;
+
+            }
+
+            100% {
+                opacity: 0;
+
+            }
+        }
+
+        .vide2 {
+            opacity: 1;
+            animation: a2 10s linear infinite;
+        }
+
+        @keyframes a2 {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+
+            }
+
+            21% {
+                opacity: 1;
+
+            }
+
+            40% {
+
+                opacity: 1;
+            }
+
+            41% {
+                opacity: 0;
+
+            }
+
+            100% {
+                opacity: 0;
+
+            }
+        }
+
+        .vide3 {
+            opacity: 1;
+            animation: a3 10s infinite linear;
+        }
+
+        @keyframes a3 {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            21% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            41% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            61% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .vide4 {
+            opacity: 1;
+            animation: a4 10s infinite linear;
+        }
+
+        @keyframes a4 {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            21% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            41% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            61% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            81% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .vide5 {
+            opacity: 1;
+            animation: a5 10s infinite linear;
+        }
+
+        @keyframes a5 {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            21% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            41% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            61% {
+                opacity: 0;
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            81% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .vedio-main {
+            width: 50%;
+            height: 170px;
+            /* background-color: gray; */
+            margin: auto;
+            margin-top: 70px;
+            position: relative;
+        }
+
+        .vedio-text1 {
+            width: 100%;
+            height: 170px;
+            /* border: 1px solid white; */
+            margin: auto;
+            position: absolute;
+            opacity: 1;
+            animation: m1 10s linear infinite;
+        }
+
+        @keyframes m1 {
+            0% {
+                opacity: 1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            21% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+
+        .icon-parent1 {
+            width: 40%;
+            height: 40px;
+            /* border: 1px solid white; */
+        }
+
+        .icon-set {
+            margin: 0;
+        }
+
+        .icon {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: gray;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            margin-left: 5px;
+            margin-top: 10px;
+        }
+
+        .icon1 {
+            background-color: white;
+        }
+
+        .head-vedio {
+            width: 210px;
+            height: 30px;
+            /* border: 1px solid white; */
+        }
+
+        .v-styler {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .txt {
+            width: 90%;
+            height: 70px;
+            /* border: 1px solid white; */
+        }
+
+        .txt-styler {
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .vedio-text2 {
+            width: 100%;
+            height: 170px;
+            /* border: 1px solid white; */
+            margin: auto;
+            position: absolute;
+            opacity: 1;
+            animation: m2 linear 10s infinite;
+        }
+
+        @keyframes m2 {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            21% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            41% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .vedio-text3 {
+            width: 100%;
+            height: 170px;
+            /* border: 1px solid white; */
+            margin: auto;
+            position: absolute;
+            opacity: 1;
+            animation: m3 linear 10s infinite;
+        }
+
+        @keyframes m3 {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            21% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            41% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            61% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .vedio-text4 {
+            width: 100%;
+            height: 170px;
+            /* border: 1px solid white; */
+            margin: auto;
+            position: absolute;
+            opacity: 1;
+            animation: m4 linear 10s infinite;
+        }
+
+        @keyframes m4 {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            21% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            41% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            61% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 1;
+            }
+
+            81% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .vedio-text5 {
+            width: 100%;
+            height: 170px;
+            /* border: 1px solid white; */
+            margin: auto;
+            position: absolute;
+            opacity: 1;
+            animation: m5 linear 10s infinite;
+        }
+
+        @keyframes m5 {
+            0% {
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            21% {
+                opacity: 0;
+            }
+
+            40% {
+                opacity: 0;
+            }
+
+            41% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            61% {
+                opacity: 0;
+            }
+
+            80% {
+                opacity: 0;
+            }
+
+            81% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+
+
+
+        .connected-div {
+            height: 1100px;
+            background-color: black;
+            padding-top: 1px;
+        }
+
+        .connected-parent {
+            width: 80%;
+            height: 300px;
+            /* border: 1px solid white; */
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        .connect {
+            width: 46%;
+            height: 300px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .margin {
+            margin-left: 40px;
+        }
+
+        .img-fit {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .connect-head {
+            width: 190px;
+            height: 40px;
+            /* border: 1px solid white; */
+            margin-top: 70px;
+
+        }
+
+        .head-styler {
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .connect-body {
+            width: 80%;
+            height: 90px;
+            /* border: 1px solid white; */
+            margin-top: 10px;
+        }
+
+        .body-styler {
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .c1 {
+            margin-left: 30px;
+        }
+
+        .margin1 {
+            margin-left: 0;
+        }
+
+        .vedio-margin {
+            margin-left: 40px;
+        }
+
+        .styler {
+            border-bottom: 2px solid white;
+            cursor: pointer;
+        }
+
+        .styler:hover {
+            border-bottom: 3px solid white;
+        }
+
+        .vedio-set1 {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .img2-div {
+            height: 750px;
+            background-image: url(./Model-S-Performance-Desktop.jpg);
+            background-position: center;
+            background-size: cover;
+            padding-top: 1px;
+        }
+
+        .peak-parent {
+            width: 55%;
+            /* border: 1px solid white; */
+            height: 90px;
+            margin: auto;
+            margin-top: 49%;
+        }
+
+        .peak {
+            width: 160px;
+            height: 70px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .p1 {
+            margin-left: 100px;
+        }
+
+        .peak-style {
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .peak-text {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            color: white;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .beyond-div {
+            height: 250px;
+            /* border: 2px solid black; */
+        }
+
+        .beyond1 {
+            width: 30%;
+            height: 200px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .beyond2 {
+            width: 50%;
+            height: 200px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 60px;
+        }
+
+        .plaid {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-left: 70px;
+        }
+
+        .Ludicrous {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 26px;
+            font-weight: 600;
+            margin-left: 70px;
+        }
+
+        .beyond-button {
+            width: 210px;
+            height: 40px;
+            border-radius: 5px;
+            border: 2px solid black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            margin-left: 70px;
+            background-color: transparent;
+            margin-top: 20px;
+            cursor: pointer;
+
+        }
+
+        .beyond-button:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .beyond-button2 {
+            width: 210px;
+            height: 40px;
+            border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            margin-left: 70px;
+            border: transparent;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .b-styler {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 40px;
+        }
+
+        .styling {
+            cursor: pointer;
+            border-bottom: 1px solid black;
+            margin-top: 0;
+            transition: 0.3s;
+        }
+
+        .styling:hover {
+            border-bottom: 2px solid black;
+            font-weight: 600;
+            margin-top: 3px;
+        }
+
+        .electric {
+            height: 1100px;
+            background-color: #F4F4F4;
+            padding-top: 1px;
+        }
+
+        .e-parent {
+            width: 60%;
+            height: 150px;
+            /* border: 1px solid black; */
+            margin-top: 80px;
+            margin-left: 60px;
+        }
+
+        .electric-head {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 27px;
+            font-weight: 500px;
+        }
+
+        .electric-body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 500px;
+            margin-top: 15px;
+        }
+
+        .img3-parent {
+            width: 90%;
+            height: 500px;
+            background-color: white;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .img-fitter {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+        }
+
+        .pic1 {
+            opacity: 1;
+            animation: 4s p1 linear infinite;
+        }
+
+        @keyframes p1 {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            51% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+
+        .pic2 {
+            opacity: 1;
+            animation: 4s p2 linear infinite;
+        }
+
+        @keyframes p2 {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            51% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .model-plaid {
+            height: 240px;
+            width: 86%;
+            /* border: 2px solid black; */
+            margin: auto;
+            /* position: relative; */
+        }
+
+        .model-plaid-parent {
+            width: 47%;
+            height: 230px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+        }
+
+        .model-plaid-sheet {
+            width: 100%;
+            height: 180px;
+            /* border: 1px solid black; */
+            /* display: inline-block;
+            vertical-align: top; */
+            position: absolute;
+            background-color: #f4f4f49a;
+            opacity: 1;
+            margin-top: 40px;
+        }
+
+        .p-margin {
+            margin-left: 40px;
+        }
+
+        .border-top {
+            border-bottom: 4px solid black;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .model-s {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        .model-s-txt {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+
+        .model-mph {
+            width: 130px;
+            height: 70px;
+            /* border: 1px solid black; */
+            margin-top: 15px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .m-margin {
+            margin-left: 15px;
+        }
+
+        .a1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .a2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .m-1 {
+            margin-top: 40px;
+        }
+
+        .red-car-div {
+            height: 2150px;
+            background-color: black;
+        }
+
+        .red-car {
+            height: 700px;
+            /* border: 1px solid white; */
+        }
+
+        .red-button {
+            height: 250px;
+            margin-top: 70px;
+            /* border: 1px solid white; */
+
+        }
+
+        .red {
+            width: 45%;
+            height: 250px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        .red-head {
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+
+        .red-txt {
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            font-weight: 500px;
+            margin-left: 50px;
+
+        }
+
+        .buttons-parent {
+            height: 100px;
+            /* border: 1px solid white; */
+            width: 200px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+
+        .order-button {
+            width: 200px;
+            height: 40px;
+            border: 2px solid white;
+            background-color: transparent;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .demo {
+            width: 200px;
+            height: 40px;
+            border: transparent;
+            background-color: #393c419a;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .demo:hover {
+            background-color: #393C41;
+        }
+
+        .red-styler {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .vedio2-div {
+            height: 600px;
+            background-color: white;
+        }
+
+        .vedio2-parent1 {
+            width: 70%;
+            height: 550px;
+            /* background-color: #F4F4F4;  */
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+        }
+
+        .vedio2-text {
+            height: 90px;
+            width: 80%;
+            /* border: 1px solid white; */
+            margin-left: 10%;
+            position: absolute;
+            bottom: 50px;
+
+        }
+
+        .vedio2-parent2 {
+            width: 27%;
+            height: 500px;
+            /* background-color: gray; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 15px;
+        }
+        .v-text{
+            width: 31%;
+            height: 100px;
+            /* border: 1px solid white; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 12px;
+        }
+        .v-margin{
+            margin-left: 0;
+        }
+
+        .vedio-setter {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            object-fit: cover;
+            /* position: absolute; */
+        }
+        .v-style{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .v-text-style{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .range {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 70px;
+            margin-left: 10px;
+        }
+
+        .go {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 27px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+
+        .go-txt {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .beyond-margin {
+            margin-top: 90px;
+        }
+
+        .freedom {
+            height: 1100px;
+            /* background-color: gray;  */
+            padding-top: 1px;
+        }
+
+        .freedom-parent {
+            height: 100px;
+            /* border: 1px solid black; */
+            width: 72%;
+            margin-top: 40px;
+            margin-left: 100px;
+        }
+
+        .freedom-head {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 27px;
+            font-weight: 500;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .freedom-txt {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .map {
+            width: 90%;
+            height: 550px;
+            background-color: white;
+            margin: auto;
+            margin-top: 40px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .map-set {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .map-1 {
+            opacity: 1;
+            animation: n1 linear 16s infinite;
+
+        }
+
+        @keyframes n1 {
+            0% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            26% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+
+        .map-2 {
+            opacity: 1;
+            animation: linear 16s infinite n2;
+        }
+
+        @keyframes n2 {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            26% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            51% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .map-3 {
+            opacity: 1;
+            animation: linear 16s infinite n3;
+        }
+
+        @keyframes n3 {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            26% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            51% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            76% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+
+        .map-4 {
+            opacity: 1;
+            animation: linear 16s infinite n4;
+        }
+
+        @keyframes n4 {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            26% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            51% {
+                opacity: 0;
+            }
+
+            75% {
+                opacity: 0;
+            }
+
+            76% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        .miles {
+            height: 170px;
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+            /* border: 1px solid black; */
+            position: relative;
+        }
+
+        .mile1 {
+            width: 23%;
+            height: 150px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+            opacity: 1;
+            
+        }
+        .a1{
+            animation: k1 linear infinite 16s;
+        }
+        @keyframes k1 {
+            0% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            26% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+
+        }
+        .a2{
+            animation: k2 linear infinite 16s;
+        }
+        @keyframes k2 {
+            0% {
+                opacity: 0.5;
+            }
+
+            25% {
+                opacity: 0.5;
+            }
+
+            26% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            51% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+        .a3{
+            animation: k3 linear infinite 16s;
+        }
+        @keyframes k3 {
+            0% {
+                opacity: 0.5;
+            }
+
+            25% {
+                opacity: 0.5;
+            }
+
+            26% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            51% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            76% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+
+        }
+        .z4{
+            animation: k4 linear infinite 16s;
+        }
+        @keyframes k4 {
+            0% {
+                opacity: 0.5;
+            }
+
+            25% {
+                opacity: 0.5;
+            }
+
+            26% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            51% {
+                opacity: 0.5;
+            }
+
+            75% {
+                opacity: 0.5;
+            }
+
+            76% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+
+
+
+
+        .m-margin {
+            margin-left: 0;
+        }
+
+        .mile-style {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 30px;
+            font-size: 17px;
+            font-weight: 500;
+            /* border: 1px solid black; */
+            height: 40px;
+            border-top: 4px solid black;
+            margin-top: 20px;
+        }
+        .miles-design {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 27px;
+            font-weight: 600;
+        }
+        .mile-b{
+            width: 190px;
+            height: 45px;
+            border-radius: 5px;
+            background-color: transparent;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 40%;
+            cursor: pointer;
+
+        }
+        .mile-b:hover{
+            background-color: #393C41;
+            color: white;
+        }
+
+
+
+
+        .demo-drive {
+            height: 600px;
+            /* border: 5px solid red; */
+            /* background-color: rgba(0, 0, 255, 0.263); */
+        }
+
+        .demo-parent {
+            width: 40%;
+            height: 500px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .demo1 {
+            margin-left: 40px;
+            width: 56%;
+        }
+
+        .drive {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 26px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+
+        .drive-txt {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 400;
+            margin-top: 5px;
+            margin-left: 40px;
+        }
+
+        .zip {
+            margin-top: 20px;
+        }
+
+        .zip-input {
+            width: 180px;
+            height: 45px;
+            border-radius: 5px;
+            margin-left: 40px;
+            margin-top: 10px;
+            background-color: #F4F4F4;
+            border: transparent;
+            padding-left: 10px;
+        }
+
+        .t1 {
+            font-size: 16px;
+        }
+
+        .next {
+            width: 190px;
+            height: 50px;
+            background-color: rgba(0, 0, 255, 0.425);
+            border: transparent;
+            border-radius: 5px;
+            margin-left: 40px;
+            margin-top: 20px;
+
+        }
+
+        .radius {
+            border-radius: 5px;
+        }
+
+        .safety {
+            height: 500px;
+            /* border: 2px solid black; */
+        }
+
+        .safety-head {}
+
+        .safety-parent {
+            width: 40%;
+            height: 400px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .safety-parent2 {
+            width: 53%;
+            height: 450px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            border-radius: 5px;
+            margin-left: 30px;
+            background-image: url(Model-S-Safety-Hero-Desktop-Global.jpeg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .r-margin {
+            margin-left: 40px;
+        }
+
+        .r-top {
+            margin-top: 30px;
+        }
+
+        .front {
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid black; */
+            margin-left: 140px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 20px;
+            border-left: 4px solid black;
+
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid brown;
+        }
+        .d-1{
+            margin-top: 172px;
+            margin-left: -8px;
+        }
+        .safety-text{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 17px;
+            font-weight: 500;
+            color: gray;
+            margin-left:5px;
+        }
+
+        .impact {
+            width: 200px;
+            height: 100px;
+            /* border: 1px solid black; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            margin-top: 30px;
+            border-left: 4px solid black;
+        }
+        .d-2{
+            margin-top: 70px;
+            margin-left: -8px;
+        }
+
+        .low {
+            width: 200px;
+            height: 100px;
+            /* border: 1px solid black; */
+            border-left: 4px solid black;
+            margin-left: 350px;
+            margin-top: 40px;
+            /* margin-top: 30px; */
+        }
+
+        .border-line {
+            width: 20px;
+            height: 180px;
+            border: 1px solid black;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-right: 3px solid black;
+            display: inline;
+            vertical-align: top;
+
+        }
+
+        .circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid brown;
+            margin-top: 170px;
+            margin-left: 15px;
+        }
+
+        .front-design {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: gray;
+            display: inline;
+            vertical-align: top;
+        }
+        .t-1{
+            margin-top: 80px;
+        }
+        .d-3{
+             margin-left: -8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-div">
+        <nav>
+            <div class="logo">
+                <img class="logo-setter" src="./tesla-logo-png-2244.png" alt="">
+            </div>
+            <ul id="nav-ul">
+                <li class="list-style">Vehicles
+                    <div class="vehicle">
+                        <div class="v1">
+                            <div class="model margin">
+                                <div class="model-img">
+                                    <img class="img-set" src="./Mega-Menu-Vehicles-Model-S.png" alt="">
+                                </div>
+                                <div class="model-txt">
+                                    <p class="model-design">Model S</p>
+                                    <p class="order">Learn Order
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="model">
+                                <div class="model-img">
+                                    <img class="img-set" src="./Mega-Menu-Vehicles-Model-3-Performance-LHD.png" alt="">
+                                </div>
+                                <div class="model-txt">
+                                    <p class="model-design">Model 3</p>
+                                    <p class="order">Learn Order
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="model">
+                                <div class="model-img">
+                                    <img class="img-set" src="./Mega-Menu-Vehicles-Model-X.png" alt="">
+                                </div>
+                                <div class="model-txt">
+                                    <p class="model-design">Model X</p>
+                                    <p class="order">Learn Order
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="model margin">
+                                <div class="model-img">
+                                    <img class="img-set" src="./Mega-Menu-Vehicles-Model-Y.png" alt="">
+                                </div>
+                                <div class="model-txt">
+                                    <p class="model-design">Model Y</p>
+                                    <p class="order">Learn Order
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="model">
+                                <div class="model-img">
+                                    <img class="img-set" src="./Mega-Menu-Vehicles-Cybertruck-1x.png" alt="">
+                                </div>
+                                <div class="model-txt">
+                                    <p class="model-design">Cybertruck</p>
+                                    <p class="order">Learn Order
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="model">
+                                <div class="model-img">
+                                    <img class="img-set" src="./Mega-Menu-Vehicles-HMC-RedBlue-LHD.png" alt="">
+                                </div>
+                                <div class="model-txt">
+                                    <p class="model-design">Help ME Choose</p>
+                                    <p class="order">Learn Order
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- <div class="listing">
+                            <ul>
+                                <li class="listed list1">Inventory</li>
+                                <li class="listed">Used Cars</li>
+                                <li class="listed">Demo Drive</li>
+                                <li class="listed">Trade-in</li>
+                                <li class="listed">Compare</li>
+                                <li class="listed">Help Me Charge</li>
+                                <li class="listed">Fleet</li>
+                                <li class="listed">Semi</li>
+                                <li class="listed">Roadster</li>
+
+                            </ul>
+                        </div> -->
+                    </div>
+                </li>
+                <li class="list-style">Energy
+                    <div class="energy">
+                        <div class="energy-parent1">
+                            <div class="solar s-margin">
+                                <div class="solar-img">
+                                    <img class="solar-fitter" src="./Mega-Menu-Energy-Solar-Panels.png" alt="">
+                                </div>
+                                <h2 class="solar-txt">Solar Panels</h2>
+                                <p class="order">Learn Order</p>
+                            </div>
+                            <div class="solar">
+                                <div class="solar-img">
+                                    <img class="solar-fitter" src="./Mega-Menu-Energy-Solar-Roof.png" alt="">
+                                </div>
+                                <h2 class="solar-txt">Solar Roof</h2>
+                                <p class="order">Learn Order</p>
+                            </div>
+                            <div class="solar">
+                                <div class="solar-img">
+                                    <img class="solar-fitter" src="./Mega-Menu-Energy-Powerwall-US.png" alt="">
+                                </div>
+                                <h2 class="solar-txt">Power Wall</h2>
+                                <p class="order">Learn Order</p>
+                            </div>
+                            <div class="solar s-margin">
+                                <div class="solar-img">
+                                    <img class="solar-fitter" src="./Mega-Menu-Energy-Megapack.png" alt="">
+                                </div>
+                                <h2 class="solar-txt">Megapack</h2>
+                                <p class="order">Learn</p>
+                            </div>
+                        </div>
+                        <div class="energy-parent2">
+                            <div class="line">
+                                <div class="border"></div>
+                            </div>
+                            <div class="solar-list">
+                                <ul>
+                                    <li class="listed solar-list1">Schedule a Consultation</li>
+                                    <li class="listed">Why Solar</li>
+                                    <li class="listed">Incentives</li>
+                                    <li class="listed">Support</li>
+                                    <li class="listed">Partner with Tesla</li>
+                                    <li class="listed">Commercial</li>
+                                    <li class="listed">Utilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-style">Charging
+                    <div class="charging">
+                        <div class="charge1">
+                            <div class="charge-parent parent1">
+                                <div class="charge-img">
+                                    <img class="charge-fitter" src="./Mega-Menu-Charging-Charging (1).jpeg" alt="">
+                                </div>
+                                <h2 class="solar-txt">Charging</h2>
+                                <p class="order o1">Learn</p>
+                            </div>
+                            <div class="charge-parent">
+                                <div class="charge-img">
+                                    <img class="charge-fitter" src="./Mega-Menu-Charging-Home-Charging.jpeg" alt="">
+                                </div>
+                                <h2 class="solar-txt">Home Charging</h2>
+                                <p class="order o1">Learn Shop</p>
+                            </div>
+                            <div class="charge-parent">
+                                <div class="charge-img">
+                                    <img class="charge-fitter" src="./Mega-Menu-Charging-Supercharging-NA.png" alt="">
+                                </div>
+                                <h2 class="solar-txt">Superharging</h2>
+                                <p class="order o1">Learn Find</p>
+                            </div>
+                        </div>
+                        <div class="charge2">
+                            <div class="line">
+                                <div class="border b7"></div>
+                            </div>
+                            <div class="charge-list">
+                                <ul>
+                                    <li class="listed">Help Me Charge</li>
+                                    <li class="listed">Charging Calculator</li>
+                                    <li class="listed">Charging With NACS</li>
+                                    <li class="listed">Supercharger Voting</li>
+                                    <li class="listed">Host a Supercharger</li>
+                                    <li class="listed">Commercial Charging</li>
+                                    <li class="listed">Host Wall Connectors</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-style">Discover
+                    <div class="discover">
+                        <div class="discover-parent1 d1">
+                            <ul>
+                                <li class="discover-style discover-list1">Resources</li>
+                                <li class="discover-style">Demo Drive</li>
+                                <li class="discover-style">Insurance</li>
+                                <li class="discover-style">Military Purchase Program</li>
+                                <li class="discover-style">Video Guides</li>
+                                <li class="discover-style">Customer Stories</li>
+                                <li class="discover-style">Event</li>
+                            </ul>
+                        </div>
+                        <div class="discover-parent1">
+                            <ul>
+                                <li class="discover-style discover-list1">Location Services</li>
+                                <li class="discover-style">Find Us</li>
+                                <li class="discover-style">Find a Collision Center</li>
+                                <li class="discover-style">Find a Certified Installer</li>
+                            </ul>
+                        </div>
+                        <div class="discover-parent1">
+                            <ul>
+                                <li class="discover-style discover-list1">Company</li>
+                                <li class="discover-style">About</li>
+                                <li class="discover-style">Careers</li>
+                                <li class="discover-style">Investor Relations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-style">Shop
+                    <div class="shop">
+                        <div class="images i1">
+                            <img class="img-setter" src="./Mega-Menu-Charging-Home-Charging.jpeg" alt="">
+                            <h2 class="shop-style">Charging</h2>
+                        </div>
+                        <div class="images">
+                            <img class="img-setter" src="./Mega-Menu-Shop-Vehicle-Accessories.jpeg" alt="">
+                            <h2 class="shop-style">Vehicle Accessories</h2>
+                        </div>
+                        <div class="images">
+                            <img class="img-setter img1" src="./Mega-Menu-Shop-Apparel.png" alt="">
+                            <h2 class="shop-style">Apparel</h2>
+                        </div>
+                        <div class="images">
+                            <img class="img-setter img1" src="./Mega-Menu-Shop-Lifestyle.jpeg" alt="">
+                            <h2 class="shop-style">Lifestyle</h2>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="icons">
+                <i class="fa-solid fa-question"></i>
+                <i class="fa-solid fa-globe"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </nav>
+
+        <div class="model3">
+            <h2 class="model3-design">Model S</h2>
+        </div>
+        <div class="tax">
+            <h2 class="tax-style">From $66,4901</h2>
+        </div>
+        <div class="header2">
+            <h2 class="tax-style tax-margin">After Est. Savings</h2>
+            <div class="head-line"></div>
+            </h2>
+        </div>
+        <div class="mph-parent">
+            <div class="mph" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mph-head">
+                    <h2 class="mph-head-style">359 mi</h2>
+                    <p class="mph-txt">Range (EPA est.)</p>
+                </div>
+            </div>
+            <div class="mph" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mph-head">
+                    <h2 class="mph-head-style">1.99 s</h2>
+                    <p class="mph-txt">0-60 mph2</p>
+                </div>
+            </div>
+            <div class="mph" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mph-head">
+                    <h2 class="mph-head-style">200 mph</h2>
+                    <p class="mph-txt">Top Speed3</p>
+                </div>
+            </div>
+            <div class="mph" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mph-head">
+                    <h2 class="mph-head-style">1,020 hp</h2>
+                    <p class="mph-txt">Peak Power</p>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button class="b1" data-aos="fade-up" data-aos-duration="1000">
+                <span>Order Now</span>
+            </button>
+            <button class="b2" data-aos="fade-up" data-aos-duration="1000">
+                <span>Demo Drive</span>
+            </button>
+        </div>
+    </div>
+    <div class="black">
+        <div class="black-head">
+            <p>Specs displayed are Model S Plaid values.</p>
+        </div>
+        <div class="black-body">
+            <h2 data-aos="fade-up" data-aos-duration="1000">Interior of the Future</h2>
+        </div>
+    </div>
+    <div class="img-div">
+        <img class="img-setter" src="./Model-S-Interior-Desktop.jpg" alt="">
+    </div>
+    <div class="vedio">
+        <div class="vedio-parent">
+            <video autoplay muted loop class="vedio-set vide1"
+                src="./Model-S-Interior-Carousel-1-Cinematic-Display-Desktop-Global.webm"></video>
+            <video autoplay muted loop class="vedio-set vide2"
+                src="./Model-S-Interior-Carousel-2-Yoke-Steering-Desktop (1).mp4"></video>
+            <video class="vedio-set vide3" src="./Model-S-Interior-Carousel-3-Perfect-Environment-Desktop.webm" autoplay
+                muted loop></video>
+            <video class="vedio-set vide4" src="./Model-S-Interior-Carousel-4-Second-Row-Desktop.webm" autoplay loop
+                muted></video>
+            <video class="vedio-set vide5" src="./MS-Interior-Carousel-5-Gaming-Mobile.webm" loop muted
+                autoplay></video>
+        </div>
+        <div class="vedio-main">
+            <div class="vedio-text1">
+                <div class="icon-parent1">
+                    <ul class="icon-set">
+                        <li class="icon icon1"></li>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                    </ul>
+                </div>
+                <div class="head-vedio">
+                    <h2 class="v-styler">Cinematic Experience</h2>
+                </div>
+                <div class="txt">
+                    <p class="txt-styler">A 17” touchscreen with left-right tilt offers 2200 x 1300 resolution, true
+                        colors and exceptional responsiveness for gaming, movies and more.</p>
+                </div>
+            </div>
+
+            <div class="vedio-text2">
+                <div>
+                    <ul>
+                        <li class="icon"></li>
+                        <li class="icon icon1"></li>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                    </ul>
+                </div>
+                <div class="head-vedio">
+                    <h2 class="v-styler">Yoke Steering</h2>
+                </div>
+                <div class="txt">
+                    <p class="txt-styler">A bold new approach gives you a true connection to Model S, offering better
+                        steering feel and unobstructed views of your dash and the road ahead. Tap the brake and Model S
+                        automatically selects the correct direction to start your trip.</p>
+                </div>
+            </div>
+            <div class="vedio-text3">
+                <div class="icon-parent1">
+                    <ul>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                        <li class="icon icon1"></li>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                    </ul>
+                </div>
+                <div class="head-vedio">
+                    <h2 class="v-styler">Perfect Environment</h2>
+                </div>
+                <div class="txt">
+                    <p class="txt-styler">Air vents are hidden throughout the cabin, while tri-zone temperature
+                        controls, ventilated seats and HEPA filtration deliver the perfect environment.</p>
+                </div>
+            </div>
+            <div class="vedio-text4">
+                <div class="icon-parent1">
+                    <ul>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                        <li class="icon icon1"></li>
+                        <li class="icon"></li>
+                    </ul>
+                </div>
+                <div class="head-vedio">
+                    <h2 class="v-styler">Perfect Environment</h2>
+                </div>
+                <div class="txt">
+                    <p class="txt-styler">Air vents are hidden throughout the cabin, while tri-zone temperature
+                        controls, ventilated seats and HEPA filtration deliver the perfect environment.</p>
+                </div>
+            </div>
+            <div class="vedio-text5">
+                <div class="icon-parent1">
+                    <ul>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                        <li class="icon"></li>
+                        <li class="icon icon1"></li>
+                    </ul>
+                </div>
+                <div class="head-vedio">
+                    <h2 class="v-styler">Tesla Arcade</h2>
+                </div>
+                <div class="txt">
+                    <p class="txt-styler">Play games on your in-car touchscreens.</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    </div>
+
+    <div class="connected-div">
+        <div class="connected-parent">
+            <div class="connect">
+                <img class="img-fit" data-aos="fade-up" data-aos-duration="1000" src="./Model-S-Interior-Grid-A-DMT.jpg"
+                    alt="">
+            </div>
+            <div class="connect margin" data-aos="fade-up" data-aos-duration="1000">
+                <div class="connect-head">
+                    <h2 class="head-styler">Stay Connected</h2>
+                </div>
+                <div class="connect-body">
+                    <p class="body-styler">Instantly connect with multi-device Bluetooth, or fast charge devices with
+                        wireless and 36-watt USB-C charging.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="connected-parent">
+            <div class="connect margin1" data-aos="fade-up" data-aos-duration="1000">
+                <div class="connect-head">
+                    <h2 class="head-styler">Immersive Sound</h2>
+                </div>
+                <div class="connect-body">
+                    <p class="body-styler">A 22-speaker, 960-watt audio system with Active Road Noise Reduction offers
+                        immersive listening and studio-grade sound quality.</p>
+                </div>
+            </div>
+            <div class="connect vedio-margin">
+                <video autoplay muted loop class="vedio-set1" src="../MS-Interior-Grid-2-Audio-Desktop.webm"></video>
+            </div>
+        </div>
+        <div class="connected-parent">
+            <div class="connect">
+                <img data-aos="fade-up" data-aos-duration="1000" class="img-fit" src="./MS-Interior-Grid-D-Desktop.jpeg"
+                    alt="">
+            </div>
+            <div class="connect margin" data-aos="fade-up" data-aos-duration="1000">
+                <div class="connect-head">
+                    <h2 class="head-styler">Room for Everything</h2>
+                </div>
+                <div class="connect-body">
+                    <p class="body-styler">With front and rear trunks and fold-flat seats you can fit your bike without
+                        taking the wheel off—and your luggage too. <span class="styler">Compare Models</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="img2-div">
+        <div class="peak-parent" data-aos="fade-up" data-aos-duration="1000">
+            <div class="peak">
+                <h2 class="peak-style">1,020 hp</h2>
+                <p class="peak-text">Peak Power</p>
+            </div>
+            <div class="peak p1">
+                <h2 class="peak-style">9.23 s</h2>
+                <p class="peak-text">@155 mph 1/4 mile</p>
+            </div>
+            <div class="peak p1">
+                <h2 class="peak-style">1.99 s</h2>
+                <p class="peak-text">0-60 mph2</p>
+            </div>
+        </div>
+    </div>
+    <div class="beyond-div">
+        <div class="beyond1" data-aos="fade-up" data-aos-duration="1000">
+            <p class="plaid">Plaid</p>
+            <h2 class="Ludicrous">Beyond Ludicrous</h2>
+            <button class="beyond-button">Order Now</button>
+            <button class="beyond-button2">Compare Models</button>
+
+        </div>
+        <div class="beyond2" data-aos="fade-up" data-aos-duration="1000">
+            <p class="b-styler">Model S Plaid has the quickest acceleration of any vehicle in production. Updated
+                battery architecture for all Model S trims enables back-to-back track runs without performance
+                degradation. <span class="styling">Chat with a Tesla Advisor</span> to learn more about Model S or <span
+                    class="styling">schedule a demo drive</span> today.</p>
+        </div>
+    </div>
+    <div class="electric">
+        <div class="e-parent" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="electric-head">Electric Powertrain</h2>
+            <p class="electric-body">Model S platforms unite powertrain and battery technologies for unrivaled
+                performance, range and efficiency. New module and pack thermal architecture allows faster charging and
+                gives you more power and endurance in all conditions.</p>
+        </div>
+        <div class="img3-parent">
+            <img class="img-fitter pic1" src="Model-S-Dual-Motor-Powertrain-Carousel-Desktop.jpeg" alt="">
+            <img class="img-fitter pic2" src="Model-S-Plaid-Tri-Motor-Powertrain-Carousel-Desktop.jpeg" alt="">
+
+        </div>
+        <div class="model-plaid">
+            <div class="model-plaid-parent">
+                <div class="model-plaid-sheet pic1"></div>
+                <div class="border-top"></div>
+                <h2 class="model-s">Model S</h2>
+                <p class="model-s-txt">Dual Motor All-Wheel Drive unlocks more range than any other vehicle in our
+                    current lineup, with insane power and maximum control.</p>
+                <div class="model-mph m-1">
+                    <h2 class="a1">3.1 s</h2>
+                    <p class="a2">0-60 mph</p>
+                </div>
+                <div class="model-mph m-margin m-1">
+                    <h2 class="a1">402 mi</h2>
+                    <p class="a2">Range (EPA est.)</p>
+                </div>
+                <div class="model-mph m-margin m-1">
+                    <h2 class="a1">670 hp</h2>
+                    <p class="a2">Peak Power</p>
+                </div>
+            </div>
+            <div class="model-plaid-parent p-margin">
+                <div class="model-plaid-sheet pic2"></div>
+                <div class="border-top"></div>
+                <h2 class="model-s">Model S Plaid</h2>
+                <p class="model-s-txt">Maintain 1,000+ horsepower all the way to 200 mph with Tri-Motor All-Wheel Drive,
+                    featuring torque vectoring and three independent carbon-sleeved rotors.</p>
+                <div class="model-mph">
+                    <h2 class="a1">1.99 s</h2>
+                    <p class="a2">0-60 mph2</p>
+                </div>
+                <div class="model-mph m-margin">
+                    <h2 class="a1">359 mi</h2>
+                    <p class="a2">Range (EPA est.)</p>
+                </div>
+                <div class="model-mph m-margin">
+                    <h2 class="a1">1,020 hp</h2>
+                    <p class="a2">Peak Power</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="red-car-div">
+        <div class="red-car">
+            <img class="img-fit" src="Model-S-Exterior-Hero-Desktop-Global.jpeg" alt="">
+        </div>
+        <div class="red-button" data-aos="fade-up" data-aos-duration="1000">
+            <div class="red">
+                <p class="red-head">Exterior</p>
+                <h2 class="red-txt">Designed for Efficiency</h2>
+                <div class="buttons-parent">
+                    <button class="order-button">
+                        Order Now
+                    </button>
+                    <button class="demo">
+                        Demo Drive
+                    </button>
+                </div>
+            </div>
+            <div class="red" data-aos="fade-up" data-aos-duration="1000">
+                <p class="red-styler">With a drag coefficient of just .208 Cd, the lowest on the planet, Model S is
+                    built for speed, endurance and range. Improved aerodynamics and a wider chassis offer more
+                    responsive performance so you can take corners quicker and with more confidence.</p>
+            </div>
+            <div class="connected-parent">
+                <div class="connect margin1" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="connect-head">
+                        <h2 class="head-styler">Relentless Performance</h2>
+                    </div>
+                    <div class="connect-body">
+                        <p class="body-styler">Staggered, performance wheels and tires keep the car planted and help
+                            transfer maximum power down to the road.</p>
+                    </div>
+                </div>
+                <div class="connect c1">
+                    <img class="img-fit" data-aos="fade-up" data-aos-duration="1000"
+                        src="./Model-S-Exterior-Grid-A-Desktop-Global.jpeg" alt="">
+                </div>
+            </div>
+            <div class="connected-parent">
+                <div class="connect">
+                    <img class="img-fit" data-aos="fade-up" data-aos-duration="1000"
+                        src="./Model-S-Exterior-Grid-B-Desktop-Global.jpeg" alt="">
+                </div>
+                <div class="connect margin" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="connect-head">
+                        <h2 class="head-styler">Optimized Aerodynamics</h2>
+                    </div>
+                    <div class="connect-body">
+                        <p class="body-styler">Attention to detail on all exterior surfaces makes Model S the most
+                            aerodynamic production car on Earth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="connected-parent">
+                <div class="connect margin1" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="connect-head">
+                        <h2 class="head-styler">Refined Styling</h2>
+                    </div>
+                    <div class="connect-body">
+                        <p class="body-styler">An iconic silhouette meets refreshed, elegant proportions.</p>
+                    </div>
+                </div>
+                <div class="connect c1">
+                    <img class="img-fit" data-aos="fade-up" data-aos-duration="1000"
+                        src="Model-S-Exterior-Grid-C-Desktop-Global.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="vedio2-div">
+        <div class="vedio2-parent1">
+            <video autoplay loop muted class="vedio-setter" src="./Plaid-Range-Web-Desktop-8mb.mp4"></video>
+            <div class="vedio2-text" data-aos="fade-up" data-aos-duration="1000">
+                <div class="v-text v-margin">
+                    <h2 class="v-style">402 mi</h2>
+                    <p class="v-text-style">Go anywhere with up to 402 miles of estimated range on a single charge</p>
+                </div>
+                <div class="v-text">
+                    <h2 class="v-style">15 min</h2>
+                    <p class="v-text-style">Recharge up to 200 miles in 15 minutes at Supercharger locations</p>
+                </div>
+                <div class="v-text">
+                    <h2 class="v-style">50,000 +</h2>
+                    <p class="v-text-style">Superchargers placed along popular routes</p>
+                </div>
+                
+            </div>
+
+
+
+        </div>
+        <div class="vedio2-parent2" data-aos="fade-up" data-aos-duration="1000">
+            <p class="range">Range</p>
+            <h2 class="go">Go Anywhere</h2>
+            <p class="go-txt">With up to 402 miles of estimated range and access to the world’s largest and most
+                powerful fast charging network, you’ll spend less time plugged in and more time on the road. <span
+                    class="styling">Chat with a Tesla Advisor</span> to learn more about Model S or <span
+                    class="styling">schedule a demo drive</span> today.</p>
+            <button class="beyond-button beyond-margin">Order Now</button>
+            <button class="beyond-button2">Compare Models</button>
+        </div>
+    </div>
+    <div class="freedom">
+        <div class="freedom-parent" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="freedom-head">Freedom to Travel</h2>
+            <p class="freedom-txt">Enter a destination on your touchscreen and Trip Planner will automatically calculate
+                your route with Superchargers along the way.</p>
+        </div>
+        <div class="map">
+            <img class="map-set map-1" src="./map_florida_bg_2x.jpg" alt="">
+            <img class="map-set map-2" src="./map_berkeley_bg_2x.jpg" alt="">
+            <img class="map-set map-3" src="./SF-LA_Range-Map (1).jpg" alt="">
+            <img class="map-set map-4" src="./map_newyork_bg_2x.jpg" alt="">
+        </div>
+        <div class="miles">
+            <div class="mile1 m-margin a1">
+                   <p class="mile-style">San Francisco to Los Angeles</p>
+                  <h2 class="miles-design">383 miles</h2>
+            </div>
+            <div class="mile1 a2">
+                <p class="mile-style">Berkeley to Lake Tahoe</p>
+                <h2 class="miles-design">178 miles</h2>
+            </div>
+            <div class="mile1 a3">
+                <p class="mile-style ">Manhattan to Boston</p>
+                <h2 class="miles-design">211 miles</h2>
+            </div>
+            <div class="mile1 z4">
+                <p class="mile-style a5">Fort Lauderdale to Orlando</p>
+                <h2 class="miles-design">195 miles</h2>
+            </div>
+        </div>
+        <button class="mile-b">Learn More</button> 
+
+    </div>
+    <div class="demo-drive">
+        <div class="demo-parent">
+            <h2 class="drive">Demo Drive Model S</h2>
+            <p class="drive-txt">Enter a zip code to find Tesla showrooms near you:</p>
+            <p class=" drive-txt zip">Zip Code</p>
+            <input type="text" class="zip-input">
+            <p class="drive-txt t1">This field is required</p>
+            <!-- <button class="next">Next</button> -->
+        </div>
+        <div class="demo-parent demo1">
+            <img class="img-setter radius" src="TD_Component_MS_Tablet.jpg" alt="">
+        </div>
+    </div>
+    <div class="safety">
+        <div class="safety-parent" data-aos="fade-up" data-aos-duration="1000">
+            <p class="range r-margin">Safety</p>
+            <h2 class="go r-margin">Heigh Impact Protection</h2>
+            <p class="go-txt r-margin r-top">Model S is built from the ground up as an electric vehicle, with a
+                high-strength architecture and floor-mounted battery pack for incredible occupant protection and low
+                rollover risk. Every new Model S includes Tesla’s latest active safety features, such as Automatic
+                Emergency Braking, at no extra cost.</p>
+            <button class="beyond-button r-top">Order Now</button>
+            <button class="beyond-button2">Compare Models</button>
+        </div>
+        <div class="safety-parent2">
+            <div class="front" data-aos="fade-up" data-aos-duration="1000">
+                <p class="safety-text">Front-Impact Protection</p>
+                <div class="dot d-1"></div>
+            </div>
+            <div class="impact" data-aos="fade-up" data-aos-duration="1000">
+                <p class="safety-text">Front-Impact Protection</p>
+                <div class="dot d-2"></div>
+
+            </div>
+            <div class="low" data-aos="fade-up" data-aos-duration="1000">
+                <div class="dot d-3"></div>
+                <p class="safety-text t-1">Very Low Rollover Risk</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+    </script>
+</body>
+
+</html>

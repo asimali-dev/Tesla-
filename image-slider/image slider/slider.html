@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        *{
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            box-sizing: 0;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .slide-container{
+            width: 60%;
+            position: relative;
+            overflow: hidden;
+            
+        }
+        .slider-box{
+            display: flex;
+            height: 70vh;
+
+        }
+        .slides{
+            height: 100%;
+            flex: 0 0 100%;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(100%);
+            width: 100%;
+            transition: transform 0.4s ease;
+        }
+        .btn{
+            width: 12%;
+            height: 20px;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+        .btn button{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 1px solid white;
+            background: none;
+            cursor: pointer;
+        }
+        .slides.active{
+            transform: translateX(0);
+        }
+        .btn1.active1{
+            background-color: white;
+            transition: 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slider-box">
+           <div class="slides active"  style="background-image: url(imgi_3_la.jpg);"></div>
+           <div class="slides" style="background-image: url(./imgi_4_chicago.jpg);"></div>
+           <div class="slides" style="background-image: url(./imgi_5_ny.jpg);"></div>
+        </div>
+        <div class="btn">
+           <button class="btn1 active1" id="1"></button>
+           <button class="btn1" id="2"></button>
+           <button class="btn1" id="3"></button>
+        </div>
+    </div>
+    
+</body>
+<script src="./slider.js">
+    
+</script>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dictionary App</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif ;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .container{
+            width: 60%;
+            height: max-content;
+            border-radius: 20px;
+            padding: 20px;
+            background-color: white;
+        }
+        .container h1{
+            font-size: 30px;
+            font-weight: 600;
+            text-align: center;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            height: max-content;
+            align-items: center;
+            gap: 25px;
+        }
+        header input{
+            width: 70%;
+            height: 50px;
+            background-color: rgba(255, 192, 203, 0.265);
+            padding: 15px;
+            margin-top: 20px;
+            border: transparent;
+            border-radius: 20px;
+            outline: none;
+            font-size: 18px;
+            font-weight: 500;  
+        }
+        header button{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 192, 203, 0.265);
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 500;
+            border: transparent;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        header button:hover{
+            background-color: black;
+            color: white;
+        }
+        .content{
+            width: 100%;
+            height: max-content;
+            padding: 10px;
+            /* border: 1px solid black; */
+            text-transform: capitalize;
+            /* border: 1px solid black; */
+            word-break: normal;
+            overflow-wrap: break-word;
+            white-space: normal;
+        }
+        .content span{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .content p{
+            margin-top: 20px;
+            font-size: 17px;
+            font-weight: 500;
+        }
+        .content h2{
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dictionary App</h1>
+       <header>
+            <input type="text" placeholder="Enter a word" class="input">
+            <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+       </header>
+       <div class="content">
+            
+       </div>
+    </div>    
+</body>
+<script src="./javascript.js"></script>
+</html>
